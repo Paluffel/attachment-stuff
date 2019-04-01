@@ -83,7 +83,7 @@ export default class HelloWorld {
                            }
                      }
                  }).value;
-                 model.attach(userId, "head");
+                 model.attach(userId, "center-eye");
                 })
             }
         })
