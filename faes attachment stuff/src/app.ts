@@ -73,9 +73,9 @@ export default class HelloWorld {
                 // Trigger the grow/shrink animations on hover.
                 buttonBehavior.onClick('pressed', (userId: string) => {
                     const model = Actor.CreateFromLibrary(this.context, {
-                        resourceId: "artifact: 1138530099050578592",
+                        resourceId: "artifact: 1141921348101079561",
                         actor: {
-                            name: 'Orange 02',
+                            name: 'Inviseble Cam',
                             transform: {
                                 position: { x: 0, y: 0, z: 0 },
                                 rotation: { x: 0, y: 0, z: 0 },
@@ -83,7 +83,7 @@ export default class HelloWorld {
                            }
                      }
                  }).value;
-                 model.attach(userId, "right-lower-leg");
+                 model.attach(userId, "head");
                 })
             }
         })
