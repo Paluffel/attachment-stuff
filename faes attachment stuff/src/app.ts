@@ -77,8 +77,8 @@ export default class HelloWorld {
                         actor: {
                             name: 'Yunjiscrownpinkandblue ',
                             transform: {
-                                position: { x: 0, y: 0, z: 0 },
-                                rotation: { x: -90, y: -90, z: 90 },
+                                position: { x: 0.1, y: 0.5, z: 0.2 },
+                                rotation: { x: 0, y: 0, z: 0 },
                                 scale: { x: 0.01, y: 0.01, z: 0.01 }
                            }
                      }
