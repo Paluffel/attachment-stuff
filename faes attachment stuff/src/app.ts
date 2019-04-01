@@ -73,9 +73,9 @@ export default class HelloWorld {
                 // Trigger the grow/shrink animations on hover.
                 buttonBehavior.onClick('pressed', (userId: string) => {
                     const model = Actor.CreateFromLibrary(this.context, {
-                        resourceId: "artifact: 1171063328210944377",
+                        resourceId: "artifact: 1135436940896633522",
                         actor: {
-                            name: 'Faescoolpinkwings ',
+                            name: 'Ω Letter ? ',
                             transform: {
                                 position: { x: 0.1, y: 0.0, z: 0.2 },
                                 rotation: MRE.Quaternion.RotationAxis(MRE.Vector3.Up(), -180.0 * MRE.DegreesToRadians),
@@ -83,7 +83,7 @@ export default class HelloWorld {
                            }
                      }
                  }).value;
-                 model.attach(userId, "spine-middle");
+                 model.attach(userId, "head");
                 })
             }
         })
