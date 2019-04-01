@@ -77,7 +77,7 @@ export default class HelloWorld {
                         actor: {
                             name: 'Faescoolpinkwings',
                             transform: {
-                                position: { x: 0.1, y: 0.5, z: 0.2 },
+                                position: { x: 0.1, y: 0.1, z: 0.2 },
                                 rotation: { x: 0, y: 0, z: 0 },
                                 scale: { x: 0.4, y: 0.4, z: 0.4 }
                            }
