@@ -77,7 +77,7 @@ export default class HelloWorld {
                         actor: {
                             name: 'Ω Letter ? ',
                             transform: {
-                                position: { x: 0.1, y: 0.5, z: 0.5 },
+                                position: { x: 0, y: 0.5, z: 0 },
                                 rotation: MRE.Quaternion.RotationAxis(MRE.Vector3.Up(), -180.0 * MRE.DegreesToRadians),
                                 scale: { x: 1, y: 1, z: 1 }
                            }
