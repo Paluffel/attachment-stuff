@@ -56,7 +56,7 @@ export default class HelloWorld {
         libraryActors.push(MRE.Actor.CreateFromLibrary(this.context, {
             resourceId: "artifact: 1171063328210944377",
             actor: {
-                name: 'Whitefaeroseredtoo 01',
+                name: 'Faescoolpinkwings ',
                 transform: {
                     position: { x: 0, y: 0.0, z: 0 },
                     rotation: MRE.Quaternion.RotationAxis(MRE.Vector3.Up(), -180.0 * MRE.DegreesToRadians),
@@ -75,7 +75,7 @@ export default class HelloWorld {
                     const model = Actor.CreateFromLibrary(this.context, {
                         resourceId: "artifact: 11710633282109443778",
                         actor: {
-                            name: 'Whitefaeroseredtoo 01',
+                            name: 'Faescoolpinkwings ',
                             transform: {
                                 position: { x: 0, y: 0.0, z: 0 },
                                 rotation: MRE.Quaternion.RotationAxis(MRE.Vector3.Up(), -180.0 * MRE.DegreesToRadians),
