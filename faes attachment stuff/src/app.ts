@@ -78,7 +78,7 @@ export default class HelloWorld {
                             name: 'Yunjiscrownpinkandblue ',
                             transform: {
                                 position: { x: 0, y: 0, z: 0 },
-                                rotation: { x: -90, y: 100, z: 90 },
+                                rotation: { x: -90, y: 180, z: 90 },
                                 scale: { x: 0.01, y: 0.01, z: 0.01 }
                            }
                      }
