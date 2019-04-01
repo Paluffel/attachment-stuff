@@ -83,7 +83,7 @@ export default class HelloWorld {
                            }
                      }
                  }).value;
-                 model.attach(userId, "hips");
+                 model.attach(userId, "right-lower-leg");
                 })
             }
         })
