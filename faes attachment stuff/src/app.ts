@@ -78,7 +78,7 @@ export default class HelloWorld {
                             name: 'Orange 02',
                             transform: {
                                 position: { x: 0, y: 0, z: 0 },
-                                rotation: MRE.Quaternion.RotationAxis(MRE.Vector3.Up(), -180.0 * MRE.DegreesToRadians),
+                                rotation: { x: 0, y: 0, z: 0 },
                                 scale: { x: 1, y: 1, z: 1 }
                            }
                      }
