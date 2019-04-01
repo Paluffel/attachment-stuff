@@ -77,7 +77,7 @@ export default class HelloWorld {
                         actor: {
                             name: 'Yunjiscrownpinkandblue',
                             transform: {
-                                position: { x: 0, y: 0.0, z: 0 },
+                                position: { x: 90, y: 0.0, z: 0 },
                                 rotation: MRE.Quaternion.RotationAxis(MRE.Vector3.Up(), -180.0 * MRE.DegreesToRadians),
                                 scale: { x: 0.01, y: 0.01, z: 0.01 }
                            }
