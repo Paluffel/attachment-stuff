@@ -78,7 +78,7 @@ export default class HelloWorld {
                             name: 'Faescoolpinkwings',
                             transform: {
                                 position: { x: 0, y: 0, z: 0 },
-                                rotation: { x: 0, y: 0, z: 0 },
+                                rotation: MRE.Quaternion.RotationAxis(MRE.Vector3.Up(), -180.0 * MRE.DegreesToRadians),
                                 scale: { x: 0.4, y: 0.4, z: 0.4 }
                            }
                      }
