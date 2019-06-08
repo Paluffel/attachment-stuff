@@ -13,10 +13,16 @@ import {
     Quaternion,
     TextAnchorLocation,
     Vector3,
-    Attachment
+    Attachment,
+    User,
+    
 } from '@microsoft/mixed-reality-extension-sdk';
 import * as MRE from '@microsoft/mixed-reality-extension-sdk';
 import * as MRESDK from '@microsoft/mixed-reality-extension-sdk';
+import { userInfo } from 'os';
+import { InternalUser } from '@microsoft/mixed-reality-extension-sdk/built/types/internal/user';
+import { start } from 'repl';
+import { get } from 'https';
 
 /**
  * The main class of this app. All the logic goes here.
@@ -28,65 +34,25 @@ export default class HelloWorld {
 
     constructor(private context: Context, private baseUrl: string) {
         this.context.onStarted(() => this.started());
+
     }
 
     /**
      * Once the context is "started", initialize the app.
      */
     private started() {
-        // Create a new actor with no mesh, but some text. This operation is asynchronous, so
-        // it returns a "forward" promise (a special promise, as we'll see later).
-        const textPromise = Actor.CreateEmpty(this.context, {
-            actor: {
-                name: 'Text',
-                transform: {
-                    position: { x: 0, y: 1.5, z: 0 }
-                },
-                text: {
-                    contents: " ",
-                    anchor: TextAnchorLocation.MiddleCenter,
-                    color: { r: 30 / 255, g: 206 / 255, b: 213 / 255 },
-                    height: 0.3
-                }
-            }
-        });
-
+        // 
+( (userId: string) => {
         // AltspaceVR resource IDs from https://account.altvr.com/kits/
-        const libraryActors: Array<MRE.ForwardPromise<MRE.Actor>> = [];
-        libraryActors.push(MRE.Actor.CreateFromLibrary(this.context, {
+        const model = Actor.CreateFromLibrary(this.context, {
             resourceId: "artifact: 989569229617365197",
             actor: {
                 name: 'Cube',
                 transform: {
-                    position: { x: 0, y: 0.0, z: 0 },
-                    rotation: MRE.Quaternion.RotationAxis(MRE.Vector3.Up(), -180.0 * MRE.DegreesToRadians),
-                    scale: { x: 0.4, y: 0.4, z: 0.4 }
                 }
-            }
-        }));
-        // Set up cursor interaction. We add the input behavior ButtonBehavior to the cube.
-        // Button behaviors have two pairs of events: hover start/stop, and click start/stop.
-        libraryActors.forEach((actor: MRE.ForwardPromise<MRE.Actor>) => {
-            if (actor) {
-                const buttonBehavior = actor.value.setBehavior(MRE.ButtonBehavior);
-
-                // Trigger the grow/shrink animations on hover.
-                buttonBehavior.onClick('pressed', (userId: string) => {
-                    const model = Actor.CreateFromLibrary(this.context, {
-                        resourceId: "artifact: 1171063328210944377",
-                        actor: {
-                            name: 'Faescoolpinkwings',
-                            transform: {
-                                position: { x: 0.1, y: 0.3, z: 0.2 },
-                                rotation: MRE.Quaternion.RotationAxis(MRE.Vector3.Up(), -180.0 * MRE.DegreesToRadians),
-                                scale: { x: 0.4, y: 0.4, z: 0.4 }
-                           }
-                     }
-                 }).value;
-                 model.attach(userId, "spine-middle");
-                })
-            }
-        })
-    }
+         }
+     }).value;
+     model.attach(userId, "left-ring");
+    })
 }
-
+}
